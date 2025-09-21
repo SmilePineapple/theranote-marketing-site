@@ -1,0 +1,91 @@
+# Robots.txt for Marketing Site
+# https://www.robotstxt.org/robotstxt.html
+
+# Allow all crawlers to access all content
+User-agent: *
+Allow: /
+
+# Disallow crawling of admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Disallow crawling of API routes
+Disallow: /api/
+
+# Disallow crawling of build artifacts
+Disallow: /_next/
+
+# Disallow crawling of temporary or cache files
+Disallow: /tmp/
+Disallow: /.well-known/
+
+# Allow crawling of important pages
+Allow: /
+Allow: /features
+Allow: /pricing
+Allow: /security
+
+# Sitemap location
+Sitemap: https://www.yoursite.com/sitemap.xml
+
+# Crawl delay (optional - be respectful to search engines)
+# Crawl-delay: 1
+
+# Specific rules for major search engines
+
+# Google
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Facebook (for Open Graph)
+User-agent: facebookexternalhit
+Allow: /
+
+# Twitter (for Twitter Cards)
+User-agent: Twitterbot
+Allow: /
+
+# LinkedIn
+User-agent: LinkedInBot
+Allow: /
+
+# WhatsApp
+User-agent: WhatsApp
+Allow: /
+
+# Telegram
+User-agent: TelegramBot
+Allow: /
+
+# Block known bad bots (optional)
+# User-agent: BadBot
+# Disallow: /
+
+# User-agent: SemrushBot
+# Disallow: /
+
+# User-agent: AhrefsBot
+# Disallow: /
+
+# Note: Update the sitemap URL to match your actual domain
+# Replace 'www.yoursite.com' with your actual domain name

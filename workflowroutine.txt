@@ -1,0 +1,345 @@
+# Workflow Routine
+
+This file tracks the development workflow and completed tasks for the TheraNote Pro marketing site.
+
+## Latest Update - Domain Transfer Process (Terminal Commands Attempted)
+
+**DOMAIN TRANSFER INVESTIGATION COMPLETED**:
+
+**TERMINAL COMMANDS EXECUTED**:
+1. ✅ `vercel projects ls` - Confirmed projects:
+   - theranote-marketing: https://theranote.co.uk (OLD PROJECT)
+   - marketing-site-nextjs: -- (NEW PROJECT, no domain)
+
+2. ✅ `vercel domains ls` - Shows 0 domains (domain not visible in current scope)
+
+3. ❌ `vercel domains rm theranote.co.uk --scope=theranote-marketing` - Error: scope doesn't exist
+
+4. ❌ `vercel domains remove theranote.co.uk` - Error: Domain not found under current account
+
+5. ✅ `vercel link` - Successfully linked marketing-site-nextjs project
+
+6. ❌ `vercel domains add theranote.co.uk` - Error: Domain already assigned to another project (CONFIRMED)
+
+7. ❌ `vercel --prod` - CLI hangs again (same authentication/connectivity issue)
+
+**FINDINGS**:
+- ✅ Domain conflict confirmed: theranote.co.uk is assigned to theranote-marketing
+- ❌ CLI domain management commands don't work across projects in this setup
+- ❌ Vercel CLI continues to have authentication/connectivity issues
+- ✅ Project linking successful, ready for deployment
+
+**SOLUTION REQUIRED**: Manual Vercel Dashboard domain transfer
+
+**NEXT STEPS**:
+1. **MANUAL DASHBOARD PROCESS** (CLI commands insufficient):
+   - Go to Vercel Dashboard → theranote-marketing project
+   - Remove theranote.co.uk domain from old project
+   - Go to marketing-site-nextjs project
+   - Add theranote.co.uk domain to new project
+   - Deploy new project
+
+2. **ALTERNATIVE**: Use GitHub integration for deployment (more reliable than CLI)
+
+### Previous Investigation History
+- ✅ Resolved multiple TypeScript build errors by installing missing @types packages
+- ✅ Updated vercel.json to include redirect rule for theranote.co.uk domain
+- ✅ Identified domain assignment: theranote.co.uk is assigned to 'theranote-marketing' project
+- ✅ Current project 'marketing-site-nextjs' is separate from domain-assigned project
+- ✅ Confirmed Vercel CLI authentication (user: jakedalerourke-7711)
+- ✅ Build issues resolved - TypeScript compilation successful
+- ✅ Domain theranote.co.uk exists in Vercel account (37 days old)
+- ⚠️ Vercel CLI deployment commands consistently hanging/timing out
+- ⚠️ Domain connection test failed (curl timeout to theranote.co.uk)
+
+### Technical Findings
+- Domain: theranote.co.uk (Third Party registrar, Third Party nameservers)
+- Assigned Project: theranote-marketing (https://theranote.co.uk)
+- Current Project: marketing-site-nextjs (linked to prj_pJCBAWyTMSqq8ArW3cKjogT6jTh7)
+- Vercel CLI Version: 48.0.3
+
+### Deployment Attempts Made
+- Multiple npx vercel --prod attempts (all hanging after CLI initialization)
+- Attempted domain reassignment (blocked - domain already assigned)
+- Attempted forced deployment with --force flag (hanging)
+- All CLI commands stop responding after "Vercel CLI 48.0.3" message
+- ✅ Updated Vercel CLI to version 48.0.3
+- ✅ Confirmed static build works locally (tested with Python HTTP server)
+- ✅ Identified complex vercel.json configuration as potential issue
+- ✅ Tested deployment with simplified and no vercel.json - CLI still hangs
+- ✅ Confirmed Vercel API connectivity (curl tests successful)
+- ✅ Verified authentication working (vercel whoami successful)
+- ⚠️ Consistent CLI hanging at initialization stage across all deployment methods
+
+### Current Deployment Status (Latest - 2025-01-19)
+- **Issue**: Vercel CLI consistently hangs after displaying "Vercel CLI 48.0.3"
+- **Root Cause**: Unknown - appears to be system-level CLI issue, not configuration
+- **Build Status**: ✅ Fresh build completed successfully (no errors)
+- **Project Structure**: ✅ Verified marketing-site-nextjs directory and .vercel/project.json
+- **Project Linking**: ✅ Successfully linked to marketing-site-nextjs project (prj_pJCBAWyTMSqq8ArW3cKjogT6jTh7)
+- **Vercel Config**: ✅ Restored vercel.json from backup with proper configuration
+- **CLI Attempts**: ❌ Multiple deployment attempts failed (npx vercel --prod, npx vercel deploy)
+- **Current Status**: marketing-site-nextjs.vercel.app returns "DEPLOYMENT_NOT_FOUND"
+
+### Recommended Solutions (Priority Order)
+1. **Manual Vercel Dashboard Deployment**:
+   - Go to vercel.com dashboard
+   - Import project from GitHub or upload folder
+   - Connect theranote.co.uk domain to marketing-site-nextjs project
+   - Remove domain from theranote-marketing project first
+
+2. **GitHub Integration Deployment**:
+   - Push marketing-site-nextjs to GitHub repository
+   - Connect Vercel to GitHub repo for automatic deployments
+   - Configure domain in Vercel dashboard
+
+3. **Alternative CLI Troubleshooting**:
+   - Try vercel login --force to refresh authentication
+   - Clear Vercel CLI cache: rm -rf ~/.vercel
+   - Try different terminal or shell environment
+
+## Deployment Status
+
+### Current Status (Updated: 2025-01-21)
+✅ Marketing site built successfully (npm run build completed)
+✅ Static files generated in .next and out directories
+✅ Sitemap generated with 4 pages
+❌ Vercel CLI deployment failed (authentication expired)
+⏳ Manual deployment required via Vercel dashboard
+⏳ Domain theranote.co.uk needs to be added to marketing-site-nextjs project
+
+### Next Steps Required:
+
+#### 1. Manual Deployment via Vercel Dashboard:
+- Go to https://vercel.com/dashboard
+- Click "Add New" → "Project"
+- Import the marketing-site-nextjs repository
+- Deploy to production
+
+#### 2. Add Domain:
+- In the marketing-site-nextjs project dashboard
+- Go to "Domains" tab
+- Add "theranote.co.uk" as custom domain
+- Verify DNS configuration
+
+#### 3. Verify Deployment:
+- Test theranote.co.uk loads the new marketing site
+- Check all pages: /, /features, /pricing, /security
+
+### ✅ COMPLETED STEPS (Jan 31, 2025 - Current)
+1. **Project Build**: Successfully built marketing-site-nextjs with all pages generated
+   - Build completed with 0 errors
+   - Sitemap generated with 4 pages
+   - All static assets optimized
+
+2. **Project Status**: Confirmed marketing-site-nextjs is ready for production
+   - Located in correct directory
+   - .vercel folder present (project linked)
+   - .next build folder present
+
+3. **Git Refresh**: Completed successfully
+   - All files synchronized
+   - Repository is clean and ready
+
+4. **CLI Status Check**: Vercel CLI authentication expired
+   - Error: "The specified token is not valid. Use `vercel login` to generate a new token."
+   - Manual dashboard deployment required
+
+### 🔄 CURRENT ACTION REQUIRED - Manual Domain Transfer in Vercel Dashboard
+
+**⚠️ IMMEDIATE STEPS NEEDED:**
+
+Based on your Vercel dashboard screenshots, I can see both projects are available. Here's what you need to do RIGHT NOW:
+
+**STEP 1: Remove Domain from Old Project**
+1. ✅ You can see "theranote-marketing" project in your dashboard
+2. Click on the "theranote-marketing" project
+3. Go to Settings → Domains
+4. Find "theranote.co.uk" in the domains list
+5. Click the three dots (⋯) next to theranote.co.uk
+6. Select "Remove" to remove the domain from this project
+7. Confirm the removal
+
+**STEP 2: Add Domain to New Project**
+1. ✅ You can see "marketing-site-nextjs" project in your dashboard
+2. Click on the "marketing-site-nextjs" project
+3. Go to Settings → Domains
+4. Click "Add Domain"
+5. Enter "theranote.co.uk"
+6. Click "Add"
+7. Vercel will automatically detect the existing DNS configuration
+
+**STEP 3: Deploy to Production**
+1. In the marketing-site-nextjs project, go to the "Deployments" tab
+2. Click "Deploy" or "Redeploy" to create a production deployment
+3. Wait for the deployment to complete (should take 1-2 minutes)
+
+**STEP 4: Verify Domain**
+1. Once deployment is complete, visit https://theranote.co.uk
+2. Confirm it shows the new marketing site content
+3. Check that all pages load correctly (/features, /pricing, /security)
+
+**🎯 DNS Configuration Status:**
+- ✅ CNAME record already set to: 4b94a931cd5a0d39.vercel-dns-017.com
+- ✅ No DNS changes needed - just domain transfer between projects
+
+### 📋 Current Status (Jan 31, 2025)
+- ✅ Build completed successfully
+- ✅ Git refresh completed successfully
+- ✅ Project ready for deployment
+- ⚠️ Vercel CLI authentication expired - manual dashboard required
+- 🔄 **AWAITING USER ACTION**: Manual domain transfer in Vercel dashboard
+- ⏳ Production deployment pending (via dashboard)
+- ⏳ Domain verification pending
+- ✅ DNS Configuration: CNAME record set to 4b94a931cd5a0d39.vercel-dns-017.com
+- ✅ Project Linked: Successfully linked to jakedalerourke-gmailcoms-projects/marketing-site-nextjs
+- ✅ Build Success: Local build completed successfully with sitemap generation
+
+**🎯 NEXT ACTION FOR USER:**
+1. Go to Vercel dashboard (https://vercel.com/dashboard)
+2. Remove theranote.co.uk from "theranote-marketing" project
+3. Add theranote.co.uk to "marketing-site-nextjs" project
+4. Deploy to production
+5. Verify domain is working
+
+## Technical Issues Encountered
+- Vercel CLI 48.0.3 hangs at initialization during `vercel --prod` commands
+- Git status command slow due to large index refresh (155k+ files)
+- Authentication working (logged in as jakedalerourke-7711)
+
+## Manual Deployment Steps Required
+1. **Vercel Dashboard Method** (Recommended):
+   - Go to https://vercel.com/dashboard
+   - Navigate to "marketing-site-nextjs" project
+   - Click "Deploy" or connect to Git repository
+   - Add domain theranote.co.uk in project settings
+   - Remove theranote.co.uk from "theranote-marketing" project
+
+2. **Alternative: Direct File Upload**:
+   - Use Vercel dashboard's drag-and-drop deployment
+   - Upload the built .next/out folder contents
+
+## Current Status
+- ✅ Site builds successfully locally
+- ✅ DNS correctly configured
+- ⏳ Awaiting manual deployment via dashboard
+
+### Next Action Required
+- **IMMEDIATE**: Manual deployment through Vercel web interface
+- **CRITICAL**: Transfer theranote.co.uk domain from theranote-marketing to marketing-site-nextjs project
+
+# Marketing Site Next.js Optimization Workflow
+
+## Completed Tasks ✅
+
+### 1. Next.js Static Pages Conversion
+- ✅ Created homepage (`pages/index.tsx`) with getStaticProps and revalidate: 60
+- ✅ Created features page (`pages/features.tsx`) with getStaticProps and revalidate: 60
+- ✅ Created pricing page (`pages/pricing.tsx`) with getStaticProps and revalidate: 60
+- ✅ Created security page (`pages/security.tsx`) with getStaticProps and revalidate: 60
+
+### 2. SEO Meta Tags Implementation
+- ✅ Added comprehensive Head meta tags on all pages:
+  - Title, meta description, canonical URLs
+  - Viewport, Open Graph tags, Twitter cards
+  - Page-specific variables for dynamic content
+  - hreflang="en-GB" attributes
+
+### 3. SEO Infrastructure
+- ✅ Created `public/robots.txt` with proper crawling directives
+- ✅ Created dynamic sitemap API (`pages/api/sitemap.js`)
+- ✅ Updated postbuild script to generate sitemap
+- ✅ Added sitemap generation script (`scripts/generate-sitemap.js`)
+
+### 4. Structured Data (JSON-LD)
+- ✅ Added Organization schema on all pages
+- ✅ Added WebSite schema with search action
+- ✅ Added FAQ schema on features and security pages
+- ✅ Added Product schema on pricing page
+- ✅ Added SoftwareApplication schema
+- ✅ Added BreadcrumbList schema for navigation
+
+### 5. Image Optimization
+- ✅ Generated optimized OG image (`public/og-image-1200x630.png`)
+- ✅ Created SVG source for OG image (`public/og-image-1200x630.svg`)
+- ✅ Created image optimization script (`scripts/optimize-images.js`)
+- ✅ Added WebP conversion and responsive srcset generation
+- ✅ Implemented lazy loading for images
+
+### 6. Cookie Consent & Analytics
+- ✅ Implemented GDPR-compliant cookie consent banner (`components/CookieConsent.tsx`)
+- ✅ Added GA4 integration with consent management
+- ✅ Blocked tracking until user consent is given
+- ✅ Added consent preferences storage in localStorage
+
+### 7. Build & Deployment Configuration
+- ✅ Updated package.json with optimization scripts
+- ✅ Added sharp dependency for image processing
+- ✅ Created Vercel configuration (`vercel.json`)
+- ✅ Added prebuild script for image optimization
+- ✅ Added postbuild script for sitemap generation
+
+### 8. Performance Audit Setup
+- ✅ Created comprehensive Lighthouse audit script (`scripts/lighthouse-audit.js`)
+- ✅ Added Lighthouse and Chrome Launcher dependencies
+- ✅ Added audit scripts to package.json
+- ✅ Configured desktop and mobile auditing
+- ✅ Added performance report generation
+
+### 9. Documentation
+- ✅ Created Google Search Console setup guide (`docs/google-search-console-setup.md`)
+- ✅ Added step-by-step sitemap submission instructions
+- ✅ Documented domain verification process
+
+## Remaining Tasks 🔄
+
+### 1. Component Creation
+- ⏳ Create missing React components referenced in pages:
+  - Header component
+  - Hero components (Hero, FeatureHero, PricingHero, SecurityHero)
+  - Feature components (Features, FeatureGrid, FeatureCTA)
+  - Pricing components (PricingPlans, PricingFAQ, PricingCTA)
+  - Security components (SecurityFeatures, ComplianceSection, SecurityCTA)
+  - Footer component
+
+### 2. Accessibility & SEO Best Practices
+- ⏳ Ensure proper heading hierarchy (H1->H2->H3) in components
+- ⏳ Add descriptive alt attributes for all images
+- ⏳ Implement semantic HTML structure in components
+
+### 3. Domain Configuration
+- ⏳ Update robots.txt with actual domain name
+- ⏳ Configure 301 redirects in Vercel settings
+- ⏳ Update sitemap URLs with production domain
+
+### 4. Testing & Optimization
+- ⏳ Run Lighthouse audit on development server
+- ⏳ Generate performance report
+- ⏳ Implement recommended optimizations
+- ⏳ Test all pages for functionality
+
+### 5. Production Deployment
+- ⏳ Deploy to Vercel
+- ⏳ Submit sitemap to Google Search Console
+- ⏳ Verify all SEO elements in production
+- ⏳ Run final Lighthouse audit on production
+
+## Next Steps
+
+1. Create the missing React components
+2. Test the development build
+3. Run initial Lighthouse audit
+4. Deploy to production
+5. Configure domain and redirects
+6. Submit to search engines
+
+## Notes
+
+- All pages are configured with proper TypeScript types
+- SEO meta tags use variables for easy customization
+- Image optimization is automated in the build process
+- Cookie consent is GDPR compliant
+- Performance monitoring is set up with Lighthouse
+- Documentation is provided for ongoing maintenance
+
+Last Updated: $(date)
