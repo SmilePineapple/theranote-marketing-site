@@ -237,9 +237,51 @@ Based on your Vercel dashboard screenshots, I can see both projects are availabl
 - ✅ DNS correctly configured
 - ⏳ Awaiting manual deployment via dashboard
 
+### 🚨 CRITICAL DNS ISSUE IDENTIFIED & RESOLVED (Jan 31, 2025)
+
+**PROBLEM DIAGNOSIS:**
+- ✅ www.theranote.co.uk works correctly (points to Vercel: cname.vercel-dns.com → 76.76.21.61, 76.76.21.123)
+- ❌ theranote.co.uk FAILS - points to wrong IP: 76.76.19.19 (should be Vercel IPs)
+- ✅ www.theranote.co.uk redirects to theranote.co.uk (HTTP 307) but theranote.co.uk can't connect
+
+**DNS RECORDS STATUS (UPDATED):**
+- ✅ CORRECT: www.theranote.co.uk → CNAME → cname.vercel-dns.com
+- ✅ UPDATED: theranote.co.uk → A Records → 76.76.21.61, 76.76.21.123 (DNS records updated in NameCheap)
+- ✅ DNS RESOLUTION: Both domains now resolve to correct Vercel IPs
+
+**🔍 ROOT CAUSE IDENTIFIED:**
+- ❌ **NAMESERVER MISMATCH**: Domain using NameCheap nameservers instead of Vercel nameservers
+- Current: dns1.registrar-servers.com, dns2.registrar-servers.com
+- Required: ns1.vercel-dns.com, ns2.vercel-dns.com
+- This explains why DNS record updates aren't being used by Vercel
+
+**IMMEDIATE ACTION REQUIRED:**
+1. **Fix Nameservers in NameCheap:**
+   - Change nameservers from NameCheap's to Vercel's:
+     - ns1.vercel-dns.com
+     - ns2.vercel-dns.com
+   - This will allow Vercel to manage DNS automatically
+   
+2. **Alternative (Current Setup):**
+   - Keep NameCheap nameservers but ensure all DNS records point correctly
+   - Monitor for any future DNS conflicts
+
+**CURRENT STATUS:**
+- ✅ DNS A records updated to correct Vercel IPs (76.76.21.61, 76.76.21.123)
+- ✅ DNS resolution working: `nslookup theranote.co.uk` shows correct IPs
+- ✅ Basic connectivity working: `ping theranote.co.uk` successful
+- ❌ HTTPS connection still failing: SSL/TLS handshake timeout
+- ⚠️ Nameserver mismatch may cause ongoing issues
+
+**NEXT STEPS:**
+1. **RECOMMENDED**: Update nameservers to Vercel's for full compatibility
+2. **MONITOR**: SSL certificate provisioning (may take time to propagate)
+3. **TEST**: Both domains after nameserver change
+
 ### Next Action Required
-- **IMMEDIATE**: Manual deployment through Vercel web interface
-- **CRITICAL**: Transfer theranote.co.uk domain from theranote-marketing to marketing-site-nextjs project
+- **CRITICAL**: Update nameservers to ns1.vercel-dns.com, ns2.vercel-dns.com in NameCheap
+- **MONITOR**: SSL certificate provisioning and HTTPS connectivity
+- **VERIFY**: Both domains working after nameserver change
 
 # Marketing Site Next.js Optimization Workflow
 

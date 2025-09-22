@@ -1,7 +1,7 @@
 
 # Optimized Images Usage Guide
 
-Generated on: 2025-09-22T08:27:59.501Z
+Generated on: 2025-09-22T08:47:45.327Z
 
 ## Available Optimized Images
 
