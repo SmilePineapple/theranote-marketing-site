@@ -101,6 +101,19 @@ This file tracks the development workflow and completed tasks for the TheraNote 
 ## Deployment Status
 
 ### Current Status (Updated: 2025-01-21)
+
+**Git Repository Setup - COMPLETED ✅**
+- Initialized Git repository in marketing-site-nextjs folder
+- Updated .gitignore to exclude node_modules, .next, out, and other build artifacts
+- Created clean repository without large files
+- Successfully pushed to GitHub: https://github.com/SmilePineapple/theranote-marketing-site
+- Repository is now available for Vercel connection
+
+**Next Steps:**
+- Connect theranote-marketing-site repository to Vercel
+- Deploy to production
+- Add theranote.co.uk domain to the new Vercel project
+- Verify domain and test live site
 ✅ Marketing site built successfully (npm run build completed)
 ✅ Static files generated in .next and out directories
 ✅ Sitemap generated with 4 pages

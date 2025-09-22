@@ -50,7 +50,7 @@ export const Features: React.FC = () => {
         'Appointment scheduling integration',
         'Contact information management'
       ],
-      screenshot: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20therapy%20software%20client%20management%20dashboard%20with%20clean%20interface%20showing%20client%20profiles%20and%20session%20history&image_size=landscape_4_3'
+      screenshot: '/images/feature-icon.png'
     },
     {
       id: 'session-notes',
@@ -63,7 +63,7 @@ export const Features: React.FC = () => {
         'Voice-to-text transcription',
         'Professional formatting'
       ],
-      screenshot: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=therapy%20session%20notes%20interface%20with%20AI%20assistance%20clean%20modern%20design%20text%20editor%20with%20templates&image_size=landscape_4_3'
+      screenshot: '/images/feature-icon.png'
     },
     {
       id: 'calendar',
@@ -76,7 +76,7 @@ export const Features: React.FC = () => {
         'Client self-scheduling portal',
         'Calendar integration (Google, Outlook)'
       ],
-      screenshot: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=therapy%20practice%20calendar%20scheduling%20interface%20modern%20clean%20design%20with%20appointments%20and%20time%20slots&image_size=landscape_4_3'
+      screenshot: '/images/feature-icon.png'
     },
     {
       id: 'analytics',
@@ -89,7 +89,7 @@ export const Features: React.FC = () => {
         'Appointment utilization metrics',
         'Custom reporting dashboards'
       ],
-      screenshot: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=therapy%20practice%20analytics%20dashboard%20with%20charts%20graphs%20and%20metrics%20modern%20clean%20interface&image_size=landscape_4_3'
+      screenshot: '/images/feature-icon.png'
     },
     {
       id: 'hipaa-compliance',
@@ -102,7 +102,7 @@ export const Features: React.FC = () => {
         'Secure data backup and recovery',
         'Compliance reporting tools'
       ],
-      screenshot: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=HIPAA%20compliance%20security%20dashboard%20with%20encryption%20indicators%20and%20security%20metrics%20professional%20interface&image_size=landscape_4_3'
+      screenshot: '/images/security-badge.png'
     },
     {
       id: 'mobile-access',
@@ -115,7 +115,7 @@ export const Features: React.FC = () => {
         'Secure mobile authentication',
         'Real-time synchronization'
       ],
-      screenshot: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=mobile%20therapy%20app%20interface%20on%20smartphone%20showing%20client%20notes%20and%20scheduling%20modern%20clean%20design&image_size=portrait_4_3'
+      screenshot: '/images/feature-icon.png'
     },
   ];
 

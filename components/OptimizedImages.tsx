@@ -1,6 +1,6 @@
 
 // Auto-generated optimized image components
-// Generated on: 2025-09-21T17:10:47.281Z
+// Generated on: 2025-09-22T08:27:59.500Z
 
 import React from 'react';
 

@@ -56,7 +56,7 @@ export const FeatureGrid: React.FC = () => {
         'Progress tracking and goal monitoring',
         'Integration with treatment plans'
       ],
-      screenshot: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20powered%20therapy%20session%20notes%20interface%20with%20text%20editor%20templates%20and%20AI%20suggestions%20modern%20clean%20design&image_size=landscape_4_3'
+      screenshot: '/images/feature-icon.png'
     },
     {
       id: 'client-portal',
@@ -72,7 +72,7 @@ export const FeatureGrid: React.FC = () => {
         'Emergency contact management',
         'Client portal for self-service'
       ],
-      screenshot: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=therapy%20client%20management%20dashboard%20with%20profiles%20messaging%20and%20documents%20professional%20healthcare%20interface&image_size=landscape_4_3'
+      screenshot: '/images/feature-icon.png'
     },
     {
       id: 'smart-scheduling',
@@ -88,7 +88,7 @@ export const FeatureGrid: React.FC = () => {
         'Waitlist and cancellation management',
         'Google Calendar and Outlook sync'
       ],
-      screenshot: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=therapy%20practice%20scheduling%20calendar%20interface%20with%20appointments%20time%20slots%20and%20client%20bookings%20modern%20design&image_size=landscape_4_3'
+      screenshot: '/images/feature-icon.png'
     },
     {
       id: 'billing-insurance',
@@ -104,7 +104,7 @@ export const FeatureGrid: React.FC = () => {
         'Payment plan management',
         'Integration with major clearinghouses'
       ],
-      screenshot: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=therapy%20practice%20billing%20and%20insurance%20dashboard%20with%20claims%20payments%20and%20financial%20reports%20professional%20interface&image_size=landscape_4_3'
+      screenshot: '/images/feature-icon.png'
     },
     {
       id: 'telehealth',
@@ -120,7 +120,7 @@ export const FeatureGrid: React.FC = () => {
         'Mobile app for clients',
         'Bandwidth optimization'
       ],
-      screenshot: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=telehealth%20video%20conferencing%20interface%20for%20therapy%20sessions%20with%20video%20controls%20and%20professional%20layout&image_size=landscape_4_3'
+      screenshot: '/images/feature-icon.png'
     },
     {
       id: 'analytics-reporting',
@@ -136,7 +136,7 @@ export const FeatureGrid: React.FC = () => {
         'Automated report generation',
         'Benchmark comparisons'
       ],
-      screenshot: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=therapy%20practice%20analytics%20dashboard%20with%20charts%20graphs%20revenue%20metrics%20and%20performance%20indicators&image_size=landscape_4_3'
+      screenshot: '/images/feature-icon.png'
     },
     {
       id: 'treatment-planning',
@@ -152,7 +152,7 @@ export const FeatureGrid: React.FC = () => {
         'Treatment plan sharing',
         'Insurance authorization support'
       ],
-      screenshot: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=digital%20treatment%20planning%20interface%20with%20goals%20progress%20tracking%20and%20therapy%20templates%20professional%20design&image_size=landscape_4_3'
+      screenshot: '/images/feature-icon.png'
     },
     {
       id: 'group-therapy',
@@ -168,7 +168,7 @@ export const FeatureGrid: React.FC = () => {
         'Group communication tools',
         'Outcome tracking for groups'
       ],
-      screenshot: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=group%20therapy%20management%20interface%20with%20participant%20list%20scheduling%20and%20session%20materials%20modern%20design&image_size=landscape_4_3'
+      screenshot: '/images/feature-icon.png'
     },
     {
       id: 'mobile-app',
@@ -184,7 +184,7 @@ export const FeatureGrid: React.FC = () => {
         'Real-time data synchronization',
         'Emergency contact access'
       ],
-      screenshot: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=mobile%20therapy%20practice%20app%20on%20smartphone%20showing%20client%20notes%20scheduling%20and%20dashboard%20modern%20interface&image_size=portrait_4_3'
+      screenshot: '/images/feature-icon.png'
     }
   ];
 
