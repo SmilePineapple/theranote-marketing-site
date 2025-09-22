@@ -56,7 +56,7 @@ export const FeatureGrid: React.FC = () => {
         'Progress tracking and goal monitoring',
         'Integration with treatment plans'
       ],
-      screenshot: '/images/feature-icon.png'
+      screenshot: '/images/app-notes.png'
     },
     {
       id: 'client-portal',
@@ -72,7 +72,7 @@ export const FeatureGrid: React.FC = () => {
         'Emergency contact management',
         'Client portal for self-service'
       ],
-      screenshot: '/images/feature-icon.png'
+      screenshot: '/images/app-clients.png'
     },
     {
       id: 'smart-scheduling',
@@ -88,7 +88,7 @@ export const FeatureGrid: React.FC = () => {
         'Waitlist and cancellation management',
         'Google Calendar and Outlook sync'
       ],
-      screenshot: '/images/feature-icon.png'
+      screenshot: '/images/app-calendar.png'
     },
     {
       id: 'billing-insurance',
@@ -104,7 +104,7 @@ export const FeatureGrid: React.FC = () => {
         'Payment plan management',
         'Integration with major clearinghouses'
       ],
-      screenshot: '/images/feature-icon.png'
+      screenshot: '/images/app-dashboard.png'
     },
     {
       id: 'telehealth',
@@ -120,7 +120,7 @@ export const FeatureGrid: React.FC = () => {
         'Mobile app for clients',
         'Bandwidth optimization'
       ],
-      screenshot: '/images/feature-icon.png'
+      screenshot: '/images/app-sessions.png'
     },
     {
       id: 'analytics-reporting',
@@ -136,7 +136,7 @@ export const FeatureGrid: React.FC = () => {
         'Automated report generation',
         'Benchmark comparisons'
       ],
-      screenshot: '/images/feature-icon.png'
+      screenshot: '/images/app-reports.png'
     },
     {
       id: 'treatment-planning',
@@ -152,7 +152,7 @@ export const FeatureGrid: React.FC = () => {
         'Treatment plan sharing',
         'Insurance authorization support'
       ],
-      screenshot: '/images/feature-icon.png'
+      screenshot: '/images/app-notes.png'
     },
     {
       id: 'group-therapy',
@@ -168,7 +168,7 @@ export const FeatureGrid: React.FC = () => {
         'Group communication tools',
         'Outcome tracking for groups'
       ],
-      screenshot: '/images/feature-icon.png'
+      screenshot: '/images/app-sessions.png'
     },
     {
       id: 'mobile-app',
@@ -184,7 +184,7 @@ export const FeatureGrid: React.FC = () => {
         'Real-time data synchronization',
         'Emergency contact access'
       ],
-      screenshot: '/images/feature-icon.png'
+      screenshot: '/images/app-dashboard.png'
     }
   ];
 
@@ -276,7 +276,20 @@ export const FeatureGrid: React.FC = () => {
           </div>
 
           <div className="mt-6 pt-4 border-t border-gray-100">
-            <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 text-sm">
+            <button 
+              onClick={() => {
+                console.debug('Learn More clicked for feature:', feature.title);
+                // Scroll to the CTA section for more information
+                const ctaSection = document.querySelector('.bg-white.rounded-2xl.p-8.shadow-lg');
+                if (ctaSection) {
+                  ctaSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  // Fallback: scroll to bottom of page
+                  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                }
+              }}
+              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 text-sm"
+            >
               Learn More
             </button>
           </div>
@@ -286,7 +299,7 @@ export const FeatureGrid: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="pt-0 pb-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">

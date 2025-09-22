@@ -1,7 +1,7 @@
 // Dynamic sitemap generation for Next.js
 // This API route generates sitemap.xml dynamically
 
-const DOMAIN = 'https://www.theranotepro.com';
+const DOMAIN = 'https://www.theranote.co.uk';
 
 // Static pages configuration
 const staticPages = [

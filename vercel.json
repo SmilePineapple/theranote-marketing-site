@@ -9,6 +9,17 @@
       "has": [
         {
           "type": "host",
+          "value": "app.theranote.co.uk"
+        }
+      ],
+      "destination": "https://theranote.co.uk/#waitlist",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
           "value": "theranotepro.com"
         }
       ],

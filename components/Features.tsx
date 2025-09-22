@@ -50,7 +50,7 @@ export const Features: React.FC = () => {
         'Appointment scheduling integration',
         'Contact information management'
       ],
-      screenshot: '/images/feature-icon.png'
+      screenshot: '/images/app-clients.png'
     },
     {
       id: 'session-notes',
@@ -63,7 +63,7 @@ export const Features: React.FC = () => {
         'Voice-to-text transcription',
         'Professional formatting'
       ],
-      screenshot: '/images/feature-icon.png'
+      screenshot: '/images/app-notes.png'
     },
     {
       id: 'calendar',
@@ -76,7 +76,7 @@ export const Features: React.FC = () => {
         'Client self-scheduling portal',
         'Calendar integration (Google, Outlook)'
       ],
-      screenshot: '/images/feature-icon.png'
+      screenshot: '/images/app-calendar.png'
     },
     {
       id: 'analytics',
@@ -89,7 +89,7 @@ export const Features: React.FC = () => {
         'Appointment utilization metrics',
         'Custom reporting dashboards'
       ],
-      screenshot: '/images/feature-icon.png'
+      screenshot: '/images/app-reports.png'
     },
     {
       id: 'hipaa-compliance',
@@ -102,7 +102,7 @@ export const Features: React.FC = () => {
         'Secure data backup and recovery',
         'Compliance reporting tools'
       ],
-      screenshot: '/images/security-badge.png'
+      screenshot: '/images/app-settings.png'
     },
     {
       id: 'mobile-access',
@@ -115,7 +115,7 @@ export const Features: React.FC = () => {
         'Secure mobile authentication',
         'Real-time synchronization'
       ],
-      screenshot: '/images/feature-icon.png'
+      screenshot: '/images/app-dashboard.png'
     },
   ];
 

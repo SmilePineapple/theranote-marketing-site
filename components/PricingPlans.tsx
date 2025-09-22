@@ -49,8 +49,8 @@ export const PricingPlans: React.FC = () => {
       id: 'starter',
       name: 'Starter',
       description: 'Perfect for solo practitioners just getting started',
-      monthlyPrice: 29,
-      annualPrice: 24,
+      monthlyPrice: 9.99,
+      annualPrice: 7.99,
       features: [
         'Up to 50 active clients',
         'Basic session notes',
@@ -72,8 +72,8 @@ export const PricingPlans: React.FC = () => {
       id: 'professional',
       name: 'Professional',
       description: 'Most popular choice for growing practices',
-      monthlyPrice: 79,
-      annualPrice: 64,
+      monthlyPrice: 29.99,
+      annualPrice: 23.99,
       popular: true,
       highlight: 'Most Popular',
       features: [
@@ -96,8 +96,8 @@ export const PricingPlans: React.FC = () => {
       id: 'enterprise',
       name: 'Enterprise',
       description: 'Comprehensive solution for large practices and clinics',
-      monthlyPrice: 149,
-      annualPrice: 120,
+      monthlyPrice: 49.99,
+      annualPrice: 39.99,
       features: [
         'Unlimited clients',
         'Full AI suite with custom models',

@@ -52,17 +52,20 @@ export const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose })
     console.log('📤 Submitting waitlist form:', formData);
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Call the actual API endpoint
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
       
-      // In a real implementation, you would send this to your backend
-      // const response = await fetch('/api/waitlist', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData)
-      // });
+      const result = await response.json();
       
-      console.log('✅ Waitlist submission successful');
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to join waitlist');
+      }
+      
+      console.log('✅ Waitlist submission successful:', result);
       setIsSubmitted(true);
       
       // Track conversion if GA4 is loaded

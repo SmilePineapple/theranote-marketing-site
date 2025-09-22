@@ -1,0 +1,27 @@
+{
+  "name": "TheraNote - HIPAA-Compliant Therapy Practice Management",
+  "short_name": "TheraNote",
+  "description": "Streamline your therapy practice with secure, HIPAA-compliant session notes, client management, and practice analytics.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["healthcare", "productivity", "business"],
+  "lang": "en-GB",
+  "scope": "/"
+}

@@ -37,11 +37,11 @@ const PricingPage: React.FC<PricingPageProps> = ({ lastUpdated }) => {
         '@type': 'Offer',
         name: 'Starter Plan',
         description: 'Perfect for solo practitioners starting their practice',
-        price: '29',
+        price: '9.99',
         priceCurrency: 'USD',
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
-          price: '29',
+          price: '9.99',
           priceCurrency: 'USD',
           unitText: 'MONTH'
         },
@@ -56,11 +56,11 @@ const PricingPage: React.FC<PricingPageProps> = ({ lastUpdated }) => {
         '@type': 'Offer',
         name: 'Professional Plan',
         description: 'Ideal for growing practices with advanced features',
-        price: '79',
+        price: '29.99',
         priceCurrency: 'USD',
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
-          price: '79',
+          price: '29.99',
           priceCurrency: 'USD',
           unitText: 'MONTH'
         },
@@ -75,11 +75,11 @@ const PricingPage: React.FC<PricingPageProps> = ({ lastUpdated }) => {
         '@type': 'Offer',
         name: 'Enterprise Plan',
         description: 'Custom solutions for large practices and organizations',
-        price: '0',
+        price: '49.99',
         priceCurrency: 'USD',
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
-          price: '0',
+          price: '49.99',
           priceCurrency: 'USD',
           unitText: 'MONTH'
         },

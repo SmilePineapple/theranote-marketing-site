@@ -1,0 +1,124 @@
+{
+  "features": [
+    {
+      "id": "client-management",
+      "category": "core",
+      "icon": "👥",
+      "title": "Client Management",
+      "description": "Comprehensive client profiles with secure data storage and easy access to session history.",
+      "benefits": [
+        "Secure client profiles with HIPAA compliance",
+        "Session history and progress tracking",
+        "Appointment scheduling integration",
+        "Contact information management"
+      ],
+      "screenshot": "/images/app-clients.png"
+    },
+    {
+      "id": "session-notes",
+      "category": "core",
+      "icon": "📝",
+      "title": "AI-Powered Session Notes",
+      "description": "Generate comprehensive session notes with AI assistance while maintaining your professional voice.",
+      "benefits": [
+        "AI-assisted note generation",
+        "Customizable templates",
+        "Voice-to-text transcription",
+        "Professional formatting"
+      ],
+      "screenshot": "/images/app-notes.png"
+    },
+    {
+      "id": "calendar",
+      "category": "productivity",
+      "icon": "📅",
+      "title": "Smart Scheduling",
+      "description": "Intelligent calendar management with automated reminders and conflict detection.",
+      "benefits": [
+        "Automated appointment reminders",
+        "Conflict detection and resolution",
+        "Client self-scheduling portal",
+        "Calendar integration (Google, Outlook)"
+      ],
+      "screenshot": "/images/app-calendar.png"
+    },
+    {
+      "id": "analytics",
+      "category": "insights",
+      "icon": "📊",
+      "title": "Practice Analytics",
+      "description": "Comprehensive insights into your practice performance and client outcomes.",
+      "benefits": [
+        "Revenue and billing analytics",
+        "Client progress tracking",
+        "Appointment utilization metrics",
+        "Custom reporting dashboards"
+      ],
+      "screenshot": "/images/app-reports.png"
+    },
+    {
+      "id": "hipaa-compliance",
+      "category": "security",
+      "icon": "🔒",
+      "title": "HIPAA Compliance",
+      "description": "Built-in HIPAA compliance with end-to-end encryption and audit trails.",
+      "benefits": [
+        "256-bit end-to-end encryption",
+        "Comprehensive audit trails",
+        "Secure data backup and recovery",
+        "Compliance reporting tools"
+      ],
+      "screenshot": "/images/security-badge.png"
+    },
+    {
+      "id": "mobile-access",
+      "category": "accessibility",
+      "icon": "📱",
+      "title": "Mobile Access",
+      "description": "Access your practice data securely from anywhere with our mobile-optimized platform.",
+      "benefits": [
+        "Responsive web application",
+        "Offline note-taking capability",
+        "Secure mobile authentication",
+        "Real-time synchronization"
+      ],
+      "screenshot": "/images/app-dashboard.png"
+    },
+    {
+      "id": "billing-automation",
+      "category": "productivity",
+      "icon": "💰",
+      "title": "Billing Automation",
+      "description": "Streamline your billing process with automated invoicing and payment tracking.",
+      "benefits": [
+        "Automated invoice generation",
+        "Payment tracking and reminders",
+        "Insurance claim processing",
+        "Financial reporting"
+      ],
+      "screenshot": "/images/app-dashboard.png"
+    },
+    {
+      "id": "telehealth",
+      "category": "core",
+      "icon": "💻",
+      "title": "Telehealth Integration",
+      "description": "Seamlessly conduct virtual sessions with integrated video conferencing.",
+      "benefits": [
+        "HIPAA-compliant video calls",
+        "Session recording capabilities",
+        "Screen sharing tools",
+        "Virtual waiting room"
+      ],
+      "screenshot": "/images/app-sessions.png"
+    }
+  ],
+  "categories": {
+    "all": "All Features",
+    "core": "Core Features",
+    "productivity": "Productivity",
+    "security": "Security",
+    "insights": "Analytics",
+    "accessibility": "Accessibility"
+  }
+}

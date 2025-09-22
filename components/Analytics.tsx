@@ -5,10 +5,18 @@ interface AnalyticsProps {
   trackingId?: string;
 }
 
-export const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {
+export const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
   useEffect(() => {
     console.log('📊 Analytics component mounted at:', new Date().toISOString());
-  }, []);
+    if (!trackingId || trackingId === 'G-XXXXXXXXXX') {
+      console.warn('⚠️ Google Analytics tracking ID not configured');
+    }
+  }, [trackingId]);
+
+  // Don't render if no valid tracking ID is provided
+  if (!trackingId || trackingId === 'G-XXXXXXXXXX') {
+    return null;
+  }
 
   return (
     <>

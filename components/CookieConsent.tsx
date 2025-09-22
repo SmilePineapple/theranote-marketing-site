@@ -50,7 +50,13 @@ const CookieConsent: React.FC = () => {
     // Only initialize if not already loaded
     if (typeof window !== 'undefined' && !window.gtag) {
       // Google Analytics 4 - Replace GA_MEASUREMENT_ID with your actual ID
-      const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // TODO: Replace with actual GA4 ID
+      const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+      
+      // Don't initialize if no valid tracking ID is configured
+      if (!GA_MEASUREMENT_ID || GA_MEASUREMENT_ID === 'G-XXXXXXXXXX') {
+        console.warn('⚠️ Google Analytics tracking ID not configured - skipping initialization');
+        return;
+      }
       
       // Load gtag script
       const script = document.createElement('script');

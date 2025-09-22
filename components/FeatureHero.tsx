@@ -86,7 +86,7 @@ export const FeatureHero: React.FC = () => {
                   </div>
                   <div className="aspect-video relative">
                     <Image
-                      src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20therapy%20practice%20management%20dashboard%20with%20multiple%20features%20client%20management%20scheduling%20notes%20analytics%20clean%20professional%20interface&image_size=landscape_16_9"
+                      src="/images/feature-icon.png"
                       alt="TheraNote Pro comprehensive dashboard showing all features"
                       fill
                       className="object-cover"

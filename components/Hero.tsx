@@ -35,7 +35,7 @@ export const Hero: React.FC = () => {
 
   return (
     <>
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {/* Background Elements */}
         <div className="absolute inset-0">
           {/* Gradient Overlay */}
@@ -71,7 +71,7 @@ export const Hero: React.FC = () => {
             </h1>
 
             {/* Subtitle */}
-            <p className={`text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-400 transform ${
+            <p className={`text-xl sm:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-400 transform ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
             }`}>
               Streamline your practice with secure client management, automated session notes, 

@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration
-const DOMAIN = 'https://www.theranotepro.com';
+const DOMAIN = 'https://www.theranote.co.uk';
 const OUTPUT_PATH = path.join(__dirname, '../public/sitemap.xml');
 
 // Static pages with their priorities and change frequencies
